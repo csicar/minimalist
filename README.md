@@ -15,9 +15,9 @@ Onclick `button.getmenu` in the `div.nav` (Nav on the top)
  * `ul.menu` gets Class `.selected`
  * `#content` get Class `.unselected`
 
-_____________________________________
+\_____________________________________
  | < |
-_____________________________________
+\_____________________________________
 |                 |                 |
 |                 |                 |
 |                 |                 |
