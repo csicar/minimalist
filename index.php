@@ -54,8 +54,9 @@
     </div>  
 <script>
   $(".deeper .deeper > ul").addClass("hidden");
-  makeK();
-  $(".deeper .deeper > a").before('<button class="hider"></button>')
+ 
+  $(".deeper .deeper > a").before('<button class="hider"></button>');
+   makeK();
   $(".deeper .deeper > button").click(function(e){
     var menu = $(e.currentTarget).parent().find("> ul");
     var button = $(e.currentTarget);
@@ -86,8 +87,11 @@
   function makeK(){
     $(".deeper .deeper > ul").each(function(i, elem){
       if(localStorage[i] == "true"){ 
-        $(this).addClass("shown").removeClass("hidden")
-       
+        $(this)
+          .addClass("shown")
+          .removeClass("hidden")
+        $(this).parent().find("button").addClass("shown")
+          .removeClass("hidden")
      }
       console.log("a")
     });
