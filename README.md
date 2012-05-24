@@ -21,7 +21,7 @@ Onclick `button.getmenu` in the `div.nav` (Nav on the top)
 
 \_____________________________________
 
-|                 |                 |
+|                                     |                 |
 
 |                 |                 |
 
