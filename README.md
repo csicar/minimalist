@@ -15,6 +15,31 @@ Onclick `button.getmenu` in the `div.nav` (Nav on the top)
  * `ul.menu` gets Class `.selected`
  * `#content` get Class `.unselected`
 
-<div style="background: grey;">asd
+Clicking it again:
+ * `button.getmenu` get Class `.right`
+ * `ul.menu` gets Class `unselected`
+ * `#content` get Class `.selected`
 
-</div>
+Everything else is caused by css:
+```css
+/*Pseudo Code*/
+.right {
+  rotate: 180deg;
+  trasition: true
+}
+
+menu.selected {
+  left: 0
+}
+
+content.unselected {
+left: 100%;
+}
+
+menu.unselected {
+  left: 100%;
+}
+
+content.selected {
+  left: 0;
+}
