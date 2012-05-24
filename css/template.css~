@@ -1,0 +1,287 @@
+body {
+	
+	font-family: Arial;
+	margin: 0;
+	background-color: #FEFEFE;
+	background-repeat:no-repeat;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+
+a {
+	color: rgb(25, 130, 209) ;
+	text-decoration: none;	
+}
+
+div#content a {
+	font-weight: bold;	
+}
+
+
+/*
+//////////////////////////////////
+//                              //
+//	  Nav   		//
+//                              //
+//////////////////////////////////
+*/
+#nav {
+background-image: linear-gradient(bottom, rgb(15,15,15) 0%, rgb(82,80,82) 100%);
+background-image: -o-linear-gradient(bottom, rgb(15,15,15) 0%, rgb(82,80,82) 100%);
+background-image: -moz-linear-gradient(bottom, rgb(15,15,15) 0%, rgb(82,80,82) 100%);
+background-image: -webkit-linear-gradient(bottom, rgb(15,15,15) 0%, rgb(82,80,82) 100%);
+background-image: -ms-linear-gradient(bottom, rgb(15,15,15) 0%, rgb(82,80,82) 100%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(15,15,15)),
+	color-stop(1, rgb(82,80,82))
+);
+	font: 13px/40px Arial,sans-serif;
+	height: 40px;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+	margin: 0px;
+	background-color: black;
+	-moz-box-shadow: 0 0 5px 2px #888;
+	-webkit-box-shadow: 0 0 5px 2px #888;
+	box-shadow: 0 0 5px 2px #888;
+	overflow: hidden;
+	
+}
+
+#nav ul {
+	z-index: 999;
+	margin: 0;
+	float: left;
+	height: 40px;	
+	display: inline;
+	color: white;
+	padding-left: 0;
+	
+}
+#nav ul li {
+	float: left;
+	color: white;	
+	
+	height: 100%;
+	display: inline;
+		
+}
+
+#nav ul li a:hover {
+	
+	color: black;
+	background-color: rgb(240, 240, 240);	
+}
+
+#nav ul li a {
+	transition: all 0.5s;
+	-moz-transition: all 0.5s; /* Firefox 4 */
+	-webkit-transition: all 0.5s; /* Safari and Chrome */
+	-o-transition: all 0.5s; /* Opera */
+	padding-left: 8px;
+	padding-right: 8px;
+	display: inline;
+	color:rgb(240, 240, 240);
+	text-decoration: none;	
+	float: left;
+}
+
+/*
+	Login form auf der rechten Seite
+*/
+
+
+
+#nav form {
+	z-index: 101;
+
+	overflow: hidden;
+	float: right;
+	height: 40px;
+	display: inline;
+}
+
+#nav form ul{
+	display: none;
+}
+
+#nav fieldset {
+	margin: 0;
+	padding: 0;
+	color: rgb(240, 240, 240);
+	border: none;
+	height: 40px;
+	display: inline;
+}
+#nav fieldset p {
+	font: 13px/27px Arial,sans-serif;
+	margin: 0;
+	height: 40px;
+	display: inline;
+}
+
+	
+
+#nav fieldset p input[type="text"], #nav fieldset p input[type="password"], #mod-search-searchword {
+	background-color: rgb(30, 30, 30);
+	color: white;
+	padding: 2px;
+	border-radius: 5px;
+	border: 0.5px solid black;
+	box-shadow: inset 1px 1px  3px black;
+}
+#form-login-remember {
+	display: none !important;	
+}
+
+#nav form input[type="submit"] {
+    background-color: rgba(40, 40, 40, 0);
+    border: none;
+    color: rgb(240, 240, 240);
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: all 0.5s;
+	-moz-transition: all 0.5s; /* Firefox 4 */
+	-webkit-transition: all 0.5s; /* Safari and Chrome */
+	-o-transition: all 0.5s; /* Opera */
+    
+}
+
+#nav form::-webkit-input-placeholder  { color: rgb(20, 20, 20); } 
+
+#nav form input[type="submit"]:hover {
+	box-shadow: 0px 0px 10px black;
+	background-color: rgba(240, 240, 240, 1);
+	color: rgb(20, 20, 20);
+}
+
+
+::-webkit-autofill {
+    background-color: #fff !important;
+}
+
+div .login-greeting, div .logout-button{
+	display: inline; 
+	color:white;
+	font: 13px/27px Arial,sans-serif;
+}
+.current, .active {
+	font-weight:bold;
+}
+/*
+//////////////////////////////////
+//                              //
+//	  Content		//
+//                              //
+//////////////////////////////////
+*/
+#content { 
+	margin: 10%;
+	color: #222;
+}
+#content h2 a{ 
+	transition: all 0.5s;
+	-moz-transition: all 0.5s; /* Firefox 4 */
+	-webkit-transition: all 0.5s; /* Safari and Chrome */
+	-o-transition: all 0.5s; /* Opera */
+	text-decoration: none;
+	color: #666;
+}
+#content h2 a:hover{ 
+	color: #111;
+}
+
+/*Search site */
+
+.search-bg {
+	background-image: url("search.svg");
+	background-repeat: no-repeat;
+	background-position: 20px 60px;	
+	background-size: 20%;
+}
+
+div#content.float div.search {
+	margin-left: 20%;	
+}
+
+
+div#content.float div.search h1 {
+	display: none;	
+}
+
+
+
+
+/*
+//////////////////////////////////
+//                              //
+//	  Footer		//
+//                              //
+//////////////////////////////////
+*/
+#footer {
+	background-image: linear-gradient(bottom, rgb(153,153,153) 0%, rgb(230,230,230) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(153,153,153) 0%, rgb(230,230,230) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(153,153,153) 0%, rgb(230,230,230) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(153,153,153) 0%, rgb(230,230,230) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(153,153,153) 0%, rgb(230,230,230) 100%);
+	
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(160,160,160)),
+		color-stop(1, rgb(200,200,200))
+	);
+
+	bottom: 0;
+	padding: 2px;
+
+}
+
+#footer ul li {
+	list-style: none;
+}
+
+#footer ul li a {
+	transition: all 0.5s;
+	-moz-transition: all 0.5s; /* Firefox 4 */
+	-webkit-transition: all 0.5s; /* Safari and Chrome */
+	-o-transition: all 0.5s; /* Opera */
+	text-decoration: none;
+	color: #666;	
+	text-shadow: #111 -0.5px -0.5px 0.5px, white 0.5px 0.5px 0.5px;
+	
+	font-size: 15px;
+}
+
+#footer ul li a:hover {
+	color: #1982D1;	
+	text-shadow: none;
+	
+}
+#copyright {
+	-webkit-user-select: none;
+	content: "(C) Carsten Csiky";
+	text-align: center;
+	font-size: 8px;
+	color: #666;	
+	text-shadow: white 0 1px 1px;
+}
+
+
+
+
+
+

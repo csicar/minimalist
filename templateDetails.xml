@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="template">
+	<name>Minimalist</name>
+	<creationDate>2011-31-12</creationDate>
+	<author>Carsten Csiky</author>
+	<authorEmail>carsten@csiky.info</authorEmail>
+	<authorUrl>http://csiky.info</authorUrl>
+	<copyright>Carsten Csiky 2011</copyright>
+	<license>GNU/GPL_v3</license>
+	<version>0.5</version>
+	<description>A very simple, but nice Template</description>
+	<files>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>images</folder>
+		<folder>css</folder>
+	</files>
+	<positions>
+		<position>nav</position>
+		<position>nav-right</position>
+		<position>menu-left</position>
+		<position>footer</position>
+	</positions>
+</extension>
