@@ -30,7 +30,7 @@
 <body>
   
     <div id="nav">
-      <button class="getmenu"><svg height="100%" width="100%"><path style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); " fill="#ffffff" stroke="none" d="M21.871,9.814L15.684,16.001L21.871,22.188L18.335,25.725L8.612,16.001L18.335,6.276Z" transform="matrix(1,0,0,1,4,4)"></path></svg></button>
+      <button class="getmenu"><svg ><path style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); " fill="#ffffff" stroke="none" d="M21.871,9.814 15.684,16.001 21.871,22.188 18.335,25.725 8.612,16.001 18.335,6.276z" transform="matrix(1,0,0,1,4,4)"></path></svg></button>
       <jdoc:include type="modules" name="nav" />
       <jdoc:include type="modules" name="login-menu" />
     </div>
@@ -50,10 +50,47 @@
     
     <div id="footer">
       <jdoc:include type="modules" name="footer" />
-      <p id="copyright">(c)</p>
+      <p id="copyright">(c) Fehler gefunden? <a href="">melde ihn!</a></p>
     </div>  
 <script>
+  $(".deeper .deeper > ul").addClass("hidden");
+  $(".deeper .deeper > a").before('<button class="hider"></button>')
+  $(".deeper .deeper > button").click(function(e){
+    var menu = $(e.currentTarget).parent().find("> ul");
+    var button = $(e.currentTarget);
+    console.log(e)
+    if(menu.hasClass("hidden")){
+         $(menu)
+           .addClass("shown")
+           .removeClass("hidden");
+      $(button).addClass("shown")
+           .removeClass("hidden");
+      console.log("if")
+      
+    }else{      
+      console.log("else: "+menu.hasClass("hidden"))
+      $(menu)
+        .addClass("hidden")
+        .removeClass("shown");
+      $(button).addClass("hidden")
+        .removeClass("shown");
+    }  
+  });
   //nimmt die höhe des bereiches ".unten" (muss vor jresizer stehen)
+  $("#nav #modlgn-username").keyup(function(e){
+    if(e.target.value == "hbgbs"){
+      alert("Rischtisch!");
+    }
+  })
+    if($('.current') && $('.current').length != 0 && $('.current')[0].innerText == "Alle Beiträge anzeigen"){
+      $('#content').addClass("inbox")
+        if($('#content.inbox .blog > *') && $('#content.inbox .blog > *').length != 0){
+          $('#content.inbox .blog > *').height(function(index, height){
+            console.log(parseInt($('#content.inbox .blog:nth-child('+index+') .article-info .hits').text().split(" ")[1]))
+            console.log(index, height)
+          })
+        }  
+    }  
   $(".getmenu").click(function(){
     console.log("click")
     if($(".unten .menu").hasClass("selected")){
