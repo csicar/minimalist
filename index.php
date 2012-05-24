@@ -50,10 +50,11 @@
     
     <div id="footer">
       <jdoc:include type="modules" name="footer" />
-      <p id="copyright">(c) Fehler gefunden? <a href="">melde ihn!</a></p>
+      <p id="copyright">(c) | Fehler gefunden? <a href="https://github.com/csicar/minimalist/issues">melde ihn!</a> | </p>
     </div>  
 <script>
   $(".deeper .deeper > ul").addClass("hidden");
+  makeK();
   $(".deeper .deeper > a").before('<button class="hider"></button>')
   $(".deeper .deeper > button").click(function(e){
     var menu = $(e.currentTarget).parent().find("> ul");
@@ -65,8 +66,8 @@
            .removeClass("hidden");
       $(button).addClass("shown")
            .removeClass("hidden");
-      console.log("if")
-      
+      console.log("if")        
+                  
     }else{      
       console.log("else: "+menu.hasClass("hidden"))
       $(menu)
@@ -74,8 +75,23 @@
         .removeClass("shown");
       $(button).addClass("hidden")
         .removeClass("shown");
-    }  
+    }
+     updateK() 
   });
+  function updateK(){
+    $(".deeper .deeper > ul").each(function(i, elem){
+      localStorage[i] = $(this).hasClass("shown")
+    });
+  }
+  function makeK(){
+    $(".deeper .deeper > ul").each(function(i, elem){
+      if(localStorage[i] == "true"){ 
+        $(this).addClass("shown").removeClass("hidden")
+       
+     }
+      console.log("a")
+    });
+  }
   //nimmt die höhe des bereiches ".unten" (muss vor jresizer stehen)
   $("#nav #modlgn-username").keyup(function(e){
     if(e.target.value == "hbgbs"){
